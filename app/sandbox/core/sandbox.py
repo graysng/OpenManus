@@ -215,7 +215,6 @@ class DockerSandbox:
             # Create parent directory
             if parent_dir:
                 await self.run_command(f"mkdir -p {parent_dir}")
-
             # Prepare file data
             tar_stream = await self._create_tar_stream(
                 os.path.basename(path), content.encode("utf-8")
